@@ -1,0 +1,25 @@
+{
+    "name": "commonparent",
+    "version": "0.1.0",
+    "title": "Common Parent",
+    "description": "Finds the common parent of a set of elements.",
+    "keywords": ["LCA", "lowest", "common", "ancestor", "parent"],
+    "author": {
+        "name": "Philip Norman",
+        "url": "http://github.com/philipnrmn"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        },
+        {
+            "type": "GPLv3",
+            "url": "http://opensource.org/licenses/GPL-3.0"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.4.0"
+    },
+    "homepage": "https://github.com/philipnrmn/jquery-commonparent"
+}
