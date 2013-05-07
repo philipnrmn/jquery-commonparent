@@ -2,7 +2,7 @@
 /*global jQuery */
 
 /**
- * @license jQuery Common Parent v0.1.0
+ * @license jQuery Common Parent v0.2.0
  * http://github.com/philipnrmn/jquery-commonparent
  * 
  * Copyright (c) 2013 Philip Norman
@@ -13,17 +13,18 @@
     'use strict';
     $.fn.commonParent = function() {
         
-        var parents = this.first().parents(),
-            commonParent = $(parents.get(0));
+        var parents = this.first().parents();
         
         this.slice(1).each(function(index, element) {
-            while ((commonParent.length > 0) && (commonParent.has(element).length < 1)) {
-                index+=1;
-                commonParent = $(parents.get(index));
+            while (parents.length > 0) {
+                if (parents.first().has(element).length > 0) {
+                    return;
+                }
+                parents.splice(0, 1);
             }
         });
         
-        return this.pushStack(commonParent);
+        return this.pushStack(parents.first());
         
     };
 }(jQuery));
